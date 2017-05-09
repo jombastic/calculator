@@ -27,5 +27,35 @@ $(document).ready(function() {
 		$("#output").text(result);
 
 		event.preventDefault();
-	})
+	});
+
+	$("form#subtract").submit(function(event) {
+		var number1 = parseInt($("#sub1").val());
+		var number2 = parseInt($("#sub2").val());
+		var result = subtract(number1, number2);
+
+		$("#output").text(result);
+
+		event.preventDefault();
+	});
+
+	$("form#multiply").submit(function(event) {
+		var number1 = parseInt($("#multi1").val());
+		var number2 = parseInt($("#multi2").val());
+		var result = multiply(number1, number2);
+
+		$("#output").text(result);
+
+		event.preventDefault();
+	});
+
+	$("form#divide").submit(function(event) {
+		var number1 = parseInt($("#divi1").val());
+		var number2 = parseInt($("#divi2").val());
+		var result = divide(number1, number2);
+
+		$("#output").text(result);
+
+		event.preventDefault();
+	});
 });
